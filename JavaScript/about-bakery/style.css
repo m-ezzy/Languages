@@ -1,0 +1,19 @@
+* {
+	font-size: 5vh;
+}
+div {
+	border-radius: 200px;
+	background-color: crimson;
+	animation: size-change 5s linear 0s infinite reverse;
+}
+@keyframes size-change {
+	0% {
+		border-radius: 200px;
+	}
+	50% {
+		border-radius: 0px;
+	}
+	100% {
+		border-radius: 200px;
+	}
+}

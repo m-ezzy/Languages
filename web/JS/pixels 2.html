@@ -1,0 +1,66 @@
+<html>
+<head>
+<title>pixels2</title>
+<style type=text/css>
+
+#master{
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto auto;
+  grid-gap: 5px;
+  padding: 5px;
+  background-color:blue;
+}
+
+#master > div {
+  background-color:black;
+  padding: 70px 0;
+}
+</style>
+<script>
+
+function p(){
+	var my=null;
+	var z=document.getElementById("master");
+	var count=0;
+	var pos=0;
+	var i=0;
+	var arr=[1,3,5,7,9];
+	clearInterval(my);
+	my=setInterval(change,100);
+	function change(){
+    		if(i==5){
+			i=0;
+		}
+		if(count==100){
+			clearInterval(my);
+    		}
+      		pos=arr[i];
+		if(z.childNodes[pos].style.backgroundColor=="white"){
+      			z.childNodes[pos].style.backgroundColor="black";
+		}
+		else{
+			z.childNodes[pos].style.backgroundColor="white";
+		}
+		i=i+1;
+		count=count+1;
+    	}
+}
+</script>
+</head>
+<body>
+<form>
+<input type="button" value="click" onclick="p()">
+</form>
+<br>
+<div id="master">
+<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+
+
+</div>
+</body>
+</html>

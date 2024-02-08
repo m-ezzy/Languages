@@ -1,0 +1,36 @@
+* {
+    overflow: hidden;
+}
+body {
+    margin: 0;
+}
+.container {
+    background-color: slateblue;
+    width: 100vw;
+	height: 100vh;
+
+	display: grid;
+	grid-template-rows: repeat(20, 5vh);
+	grid-template-columns: repeat(20, 5vw);
+}
+.bar {
+    height: 100%;
+}
+.bar.menu {
+    background-color: khaki;
+}
+.content {
+    background-color: aqua;
+}
+.bar.explore {
+    background-color: crimson;
+}
+.bar.conversation {
+    background-color: grey;
+}
+.header {
+    background-color: skyblue;
+}
+
+.button {
+}

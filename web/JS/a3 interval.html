@@ -1,0 +1,56 @@
+<html>
+<head>
+<title>animation set interval 1</title>
+
+<style type=text/css rel="stylesheet">
+#id1{
+	position:relative;
+}
+#id2{
+	position:relative;
+}
+#id3{
+	position:relative;
+}
+#id4{
+	position:relative;
+}
+</style>
+
+<script>
+var abc=setInterval(bigger,5);
+
+function bigger()
+{
+	(document.getElementById("demo1").width)++;
+
+	(document.getElementById("demo2").width)++;
+
+	(document.getElementById("demo3").width)++;
+
+	(document.getElementById("demo4").width)++;
+
+	if(document.getElementById("demo4").width>500)
+	{
+		clearInterval(abc);
+	}
+}
+</script>
+
+</head>
+<body>
+<p>content</p>
+<div id="id1">
+<img src="Tulips.jpg" id="demo1" width=10>
+</div>
+<div id="id2">
+<img src="Penguins.jpg" id="demo2" width=10>
+</div>
+<div id="id3">
+<img src="Desert.jpg" id="demo3" width=10>
+</div>
+<div id="id4">
+<img src="Jellyfish.jpg" id="demo4" width=10>
+</div>
+</body>
+</html>

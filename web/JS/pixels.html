@@ -1,0 +1,66 @@
+<html>
+<head>
+<title>pixels</title>
+<style type=text/css>
+
+body{
+    background-color:lightgrey;
+}
+
+#master{
+//  display: grid;
+//  grid-template-columns: auto auto auto auto auto auto auto auto;
+//  grid-gap: 10px;
+//  padding: 10px;
+  width:400px;
+  height:400px;
+  background-image:linear-gradient(to bottom,blue,yellow);
+}
+
+/*
+#master > div {
+  background-color:black;
+  padding: 10px 0;
+  width:100px;
+  height:100px
+}
+*/
+</style>
+<script>
+
+function p(){
+	var my;
+	var g=document.getElementById("master").style.backgroundImage;
+//	g='linear-gradient(to bottom,blue,yellow)';
+	var pos=new Number(1);
+	alert("1");
+//	clearInterval(my);
+	my=setInterval(change,10);
+	
+	function change(){
+		if(pos==5){
+			alert("2");
+			clearInterval(my);
+		}
+		pos++;
+		if(pos/2==0){
+			g="linear-gradient(to bottom,green,red)";
+		}
+		else{
+			g="linear-gradient(to bottom,blue,yellow)";
+		}
+	}
+}
+
+</script>
+
+
+</head>
+<body>
+<input type="button" onclick="p()" value=hhhhhhhhhhhhhhh><br>
+<button onclick="p()">iiiiiiiiiiiiiiii</button><br>
+<div id="master">
+
+</div>
+</body>
+</html>

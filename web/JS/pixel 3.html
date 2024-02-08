@@ -1,0 +1,50 @@
+<html>
+<head>
+    <title>pixels 3</title>
+    <style type=text/css>
+        #master{
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            grid-gap: 10px;
+            background-color: lightgrey;
+            padding: 10px;
+        }
+
+        #master > div {
+            background-color: pink;
+            padding: 20px 0;
+        }
+    </style>
+    <script>
+        var my=null;
+        function pattern(){
+            var z=document.getElementById("master");   
+            var pos=0;
+            clearInterval(my);
+            my=setInterval(change,20);
+	        
+            function change(){
+    	        if(pos==100){
+      	        clearInterval(my);
+    	        }
+	            else{
+      	            pos++;
+  	                var x = document.createElement("DIV");
+  	                z.appendChild(x);
+    	        }
+		        var ijk=z.style.gridGap;
+		        var a=parseInt(ijk,10);
+                alert(a);
+                z.style.gridGap=pos+"px";
+          	}
+        }
+    </script>
+</head>
+<body>
+    <p>
+        <button onclick="pattern()">click</button>
+    </p>
+    <div id="master">
+    </div>
+</body>
+</html>

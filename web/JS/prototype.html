@@ -1,0 +1,28 @@
+<html>
+<head>
+	<title> prototype </title>
+	<script>
+		function Animal(name, height) {
+			this.name = name;
+			this.height = height;
+		}
+		
+		Animal.prototype.speak = function () {
+			console.log(`${this.name} makes a noise.`);
+		}
+		function Dog(name, height) {
+			this.prototype.Animal(name, height);
+		}
+		Dog.prototype.speak = function () {
+			console.log(`${this.name} barks.`);
+		}
+		
+		Object.setPrototypeOf(Dog.prototype, Animal);
+	
+		const d = new Dog('Mitzie');
+		d.speak(); // Mitzie barks.
+	</script>
+</head>
+<body>
+</body>
+</html>

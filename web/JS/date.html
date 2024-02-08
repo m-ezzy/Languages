@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>dates</title>
+
+<style>
+
+</style>
+
+<script>
+
+function check(){
+	var system=new Date();
+	var d=document.getElementById("demo").value;
+	var user=new Date(d);
+	var s=system.getTime();
+	var u=user.getTime();
+	if(s>u){
+		alert("system date is of past");
+	}
+	else{
+		alert("system date is of future");
+	}
+}
+</script>
+</head>
+<body>
+
+<input type="text" id="demo">
+<p><button onclick="check()">Click Me</button></p>
+
+</body>
+</html>

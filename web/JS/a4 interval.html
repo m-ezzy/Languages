@@ -1,0 +1,56 @@
+<html>
+<head>
+<title>animation set interval 2</title>
+</head>
+<style>
+
+#contain{
+width:500px;
+height:500px;
+position:relative;
+background-color:green;
+}
+
+#demo{
+width:10px;
+height:10px;
+position:absolute;
+}
+
+#demo2{
+width:10px;
+height:10px;
+position:left;
+}
+
+</style>
+<body>
+
+<p><button onclick="myMove()">Click Me</button></p>
+
+<div id="contain">
+<img src="Tulips.jpg" id="demo">
+<img src="Jellyfish.jpg" id="demo2">
+</div>
+
+<script>
+var id=null;
+function myMove(){
+	var i=document.getElementById("demo");   
+	var pos=0;
+	clearInterval(id);
+	id=setInterval(frame,5);
+	function frame(){
+		if(pos==350){
+			clearInterval(id);
+		}
+		else{
+		pos++; 
+      		i.style.width=pos+"px";
+		i.style.height=pos+"px";
+    		}
+	}
+}
+</script>
+</body>
+</html>

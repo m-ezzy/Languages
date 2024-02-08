@@ -1,0 +1,105 @@
+<html>
+<head>
+<title>maths operations</title>
+
+<style>
+h3{
+font-size:100;
+color:green;
+}
+</style>
+
+<script>
+
+function ADD()
+{
+var t1=document.getElementById("t1");
+var t2=document.getElementById("t2");
+var ans=document.getElementById("ans");
+
+ans.value=parseInt(t1.value)+parseInt(t2.value);
+}
+function SUB()
+{
+var t1=document.getElementById("t1");
+var t2=document.getElementById("t2");
+var ans=document.getElementById("ans");
+
+ans.value=(t1.value)-(t2.value);
+}
+function MUL()
+{
+var t1=document.getElementById("t1");
+var t2=document.getElementById("t2");
+var ans=document.getElementById("ans");
+
+ans.value=(t1.value)*(t2.value);
+}
+function DIV()
+{
+var t1=document.getElementById("t1");
+var t2=document.getElementById("t2");
+var ans=document.getElementById("ans");
+
+ans.value=(t1.value)/(t2.value);
+}
+function MOD()
+{
+var t1=document.getElementById("t1");
+var t2=document.getElementById("t2");
+var ans=document.getElementById("ans");
+
+ans.value=(t1.value)%(t2.value);
+}
+
+
+function it()
+{
+var i;
+for(i=0;i<5;i++)
+{
+if(window.document.f3.c1.checked==true)
+{
+alert("this is checked");
+}
+}
+}
+
+</script>
+
+</head>
+<body>
+<form name="f1">
+<h3>NO1 : <input type"text" id="t1">
+<h3>NO2 : <input type"text" id="t2">
+
+<br>
+
+<input type="button" value="ADD" onclick="ADD()">   
+<input type="button" value="SUB" onclick="SUB()">   
+<input type="button" value="MUL" onclick="MUL()">   
+<input type="button" value="DIV" onclick="DIV()">   
+<input type="button" value="MOD" onclick="MOD()">   
+
+</form>
+<form>
+<input type="text" id="ans" onFocus="ADD()">
+</form>
+
+<br><br><br>
+
+<form name="f3">
+<input type="checkbox" value="ADD" name="c1">   
+<input type="checkbox" value="SUB" name="c2">   
+<input type="checkbox" value="MUL" name="c3">   
+<input type="checkbox" value="DIV" name="c4">   
+<input type="checkbox" value="MOD" name="c5">   
+
+</form>
+
+<form>
+<input type="button" value="output" onclick="it()">
+</form>
+
+</body>
+</html>
